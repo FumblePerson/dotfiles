@@ -6,6 +6,7 @@ brew upgrade
 brew install autoconf
 brew install awscli
 brew install bison
+brew install boot2docker
 brew install docker
 brew install git
 brew install go
