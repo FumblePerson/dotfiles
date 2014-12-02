@@ -5,6 +5,9 @@ alias ll='ls -la'
 if [ -d "/Applications/Atom.app/Contents/MacOS/Atom" ]; then
     alias atom='/Applications/Atom.app/Contents/MacOS/Atom'
 fi
+if [ -d "$HOME/.rbenv/bin" ]; then
+    export PATH="$HOME/.rbenv/bin:$PATH"
+fi
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PYENV_ROOT="${HOME}/.pyenv"
 if [ -d "${PYENV_ROOT}" ]; then
@@ -12,4 +15,4 @@ if [ -d "${PYENV_ROOT}" ]; then
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
 fi
-if which rbenv > /dev/null; then complete -C aws_completer aws; fi
+if which aws > /dev/null; then complete -C aws_completer aws; fi
